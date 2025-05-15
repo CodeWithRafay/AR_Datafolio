@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,23 +10,41 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Add Slick Carousel CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+
+<!-- Add Slick Carousel theme CSS (optional) -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+<!-- Add jQuery (required by Slick Carousel) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Add Slick Carousel JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-iZwp+rFsCzI60lf1o4Q7z0V1jeV+I+Bsl0VMeh7PQS/Z/2fKkX2c6ZtM+2GqRr/gp3AZGjlclVUIq/6SPhbD1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <script
       src="https://kit.fontawesome.com/fa62c117c7.js"
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="styles.css" />
-    <title>Raj Shekhar</title>
+    <title>Portfolio</title>
   </head>
   <body class="light" id="top">
     <header class="header center">
       <h3>
-        <a href="https://rjshkhr.github.io/cleanfolio-minimal" class="link"
-          >RS.</a
+        <a href="#" id="home">
+          <img class="logo" src="Assets/signature.png" alt="" srcset=""></a
         >
       </h3>
 
       <nav class="nav center">
         <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#education">Education</a>
+          </li>
           <li class="nav__list-item">
             <a class="link link--nav" href="#projects">Projects</a>
           </li>
@@ -54,39 +72,60 @@
 
     <main>
       <!-- About -->
-      <div class="about center">
-        <h1>Hi, I am <span class="about__name">Raj Shekhar.</span></h1>
-        <h2 class="about__role">A Front end Developer.</h2>
-        <p class="about__desc">
-          Consectetur neque sed quam molestiae consectetur nesciunt sit alias
-          Vitae libero perferendis reprehenderit optio veritatis Accusantium at
-          voluptatum cumque temporibus et Explicabo iste porro quis numquam
-          distinctio Repellendus adipisci nam perferendis amet eaque hic
-          Voluptates
+      <div class="about center" style="text-align: center;">
+        <h1>Hi, I am <span class="about__name">Abdur Rafay.</span></h1>
+        <center><h2 class="about__role center" style="text-align: center;" id="typing-effect"></h2></center>
+        <p class="about__desc" >
+          I'm Abdur Rafay, a data analyst passionate about deriving actionable insights from complex datasets. With expertise in data analysis, statistics, and programming, I excel in transforming data into strategic business decisions. My collaborative approach ensures that insights are not only accurate but also relevant and impactful. Committed to continuous learning, I stay updated with the latest tools and techniques in data analysis. Let's connect to unlock the power of data and drive your business forward.
         </p>
-
-        <div class="about__contact center">
-          <a href="https://example.com">
-            <span class="btn btn--outline">Resume</span>
-          </a>
-
-          <a
-            href="https://github.com/rjshkhr"
-            aria-label="github"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-
-          <a
-            href="https://linkedin.com/in/rjshkhr"
-            aria-label="linkedin"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-linkedin"></i>
+      
+        <div class="about__contact">
+          <a href="public/Data Analyst Resume.pdf" download="Data Analyst Resume.pdf">
+            <span class="btn2 btn--outline" style="align-items: center;">Resume</span>
           </a>
         </div>
       </div>
+
+      <section id="education" class="education-section">
+        <h2 class="section-title">Education</h2>
+        <div class="education-container">
+          <div class="education-item">
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p class="institute">Karachi University</p>
+            <p class="duration">2021 – 2025</p>
+            <p class="description">Learned fundamentals of programming, data structures, algorithms, and machine learning.</p>
+          </div>
+          <div class="education-item">
+            <h3>Intermediate in Pre-Engineering</h3>
+            <p class="institute">Fazaia Degree College</p>
+            <p class="duration">2018 – 2020</p>
+            <p class="description">Focused on mathematics, physics, and computer science.</p>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+    <!-- Certifications -->
+<div class="container">
+  <h2 class="text-center my-6 section__title">Certifications</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <img src="Assets/Python Course.jpg" class="img-fluid cert2" alt="Certificate 1">
+    </div>
+    <div class="col-md-6">
+      <img src="Assets/Business Analyst_page-0001.jpg" class="img-fluid cert2" alt="Certificate 2">
+    </div>
+    <div class="col-md-6">
+      <img src="Assets/PHP with Laravel.jpeg" class="img-fluid cert" alt="Certificate 3">
+    </div>
+    <div class="col-md-6">
+      <img src="Assets/Web Development.jpeg" class="img-fluid cert" alt="Certificate 4">
+    </div>
+  </div>
+</div>
+
+      
 
       <!-- Projects -->
       <section id="projects" class="section projects">
@@ -182,49 +221,273 @@
         </div>
       </section>
 
-      <!-- Skills -->
       <section class="section skills" id="skills">
-        <h2 class="section__title">Skills</h2>
-        <ul class="skills__list">
-          <li class="skills__list-item btn btn--plain">HTML</li>
-          <li class="skills__list-item btn btn--plain">CSS</li>
-          <li class="skills__list-item btn btn--plain">SCSS</li>
-          <li class="skills__list-item btn btn--plain">JavaScript</li>
-          <li class="skills__list-item btn btn--plain">TypeScript</li>
-          <li class="skills__list-item btn btn--plain">React</li>
-          <li class="skills__list-item btn btn--plain">Redux</li>
-          <li class="skills__list-item btn btn--plain">Git</li>
-          <li class="skills__list-item btn btn--plain">Material UI</li>
-          <li class="skills__list-item btn btn--plain">Jest</li>
-          <li class="skills__list-item btn btn--plain">Enzyme</li>
-          <li class="skills__list-item btn btn--plain">CI/CD</li>
-        </ul>
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-container">
+          <!-- Programming Skills -->
+          <div class="skills-card">
+            <h3 class="skills-card__title">Programming</h3>
+            <ul class="skills-list">
+              <li>
+                <span>HTML</span>
+                <div class="progress-container">
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 90%;"></div>
+                  </div>
+                  <span class="progress-percentage">90%</span>
+                </div>
+              </li>
+              <li>
+                <span>CSS</span>
+                <div class="progress-container">
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 85%;"></div>
+                  </div>
+                  <span class="progress-percentage">85%</span>
+                </div>
+              </li>
+              <li>
+                <span>JavaScript(Basic)</span>
+                <div class="progress-container">
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 70%;"></div>
+                  </div>
+                  <span class="progress-percentage">70%</span>
+                </div>
+              </li>
+              <li>
+                <span>Python</span>
+                <div class="progress-container">
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 90%;"></div>
+                  </div>
+                  <span class="progress-percentage">90%</span>
+                </div>
+              </li>
+              <li>
+                <span>SQL</span>
+                <div class="progress-container">
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 75%;"></div>
+                  </div>
+                  <span class="progress-percentage">75%</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Data Tools -->
+          <div class="skills-card">
+            <h3 class="skills-card__title">Data Tools</h3>
+            <ul class="skills-list">
+              <li>
+                <span>Data Manipulation</span>
+                <div class="progress-container">
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 75%;"></div>
+                  </div>
+                  <span class="progress-percentage">75%</span>
+                </div>
+              </li>
+              <li>
+                <span>Power BI</span>
+                <div class="progress-container">
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 80%;"></div>
+                  </div>
+                  <span class="progress-percentage">80%</span>
+                </div>
+              </li>
+              <li>
+                <span>Tableau</span>
+                <div class="progress-container">
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 70%;"></div>
+                  </div>
+                  <span class="progress-percentage">70%</span>
+                </div>
+              </li>
+              <li>
+                <span>MS Excel</span>
+                <div class="progress-container">
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 70%;"></div>
+                  </div>
+                  <span class="progress-percentage">80%</span>
+                </div>
+              </li>
+              <li>
+                <span>Google Sheets</span>
+                <div class="progress-container">
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 70%;"></div>
+                  </div>
+                  <span class="progress-percentage">80%</span>
+                </div>
+              </li>
+              <li>
+                <span>AI Data Scraping</span>
+                <div class="progress-container">
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 90%;"></div>
+                  </div>
+                  <span class="progress-percentage">90%</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="skills-card">
+            <h3 class="skills-card__title">Soft Skills</h3>
+            <ul class="skills-list">
+              <li>
+                <span>Communication</span>
+                <div class="progress-container">
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 85%;"></div>
+                  </div>
+                  <span class="progress-percentage">85%</span>
+                </div>
+              </li>
+              <li>
+                <span>Critical Thinking</span>
+                <div class="progress-container">
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 80%;"></div>
+                  </div>
+                  <span class="progress-percentage">80%</span>
+                </div>
+              </li>
+              <li>
+                <span>Problem Solving</span>
+                <div class="progress-container">
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 90%;"></div>
+                  </div>
+                  <span class="progress-percentage">90%</span>
+                </div>
+              </li>
+              <li>
+                <span>Time Management</span>
+                <div class="progress-container">
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 75%;"></div>
+                  </div>
+                  <span class="progress-percentage">75%</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
+      
+      
 
       <!-- Contact -->
-      <section class="section contact center" id="contact">
-        <h2 class="section__title">Contact</h2>
-        <a href="mailto:rjshekhar.official@gmail.com">
-          <span class="btn btn--outline">Email me</span>
-        </a>
-      </section>
-    </main>
+      <div class="about__contact center life">
+        <a
+        href="https://github.com/CodeWithRafay"
+        aria-label="github"
+        class="link link--icon hell"
+        target="_blank"
+      >
+        <i aria-hidden="true" class="fab fa-github"></i>
+      </a>
 
-    <footer class="footer">
       <a
-        href="https://github.com/rjshkhr/cleanfolio-minimal"
+      href="https://api.whatsapp.com/send?phone=03122053670"
+      aria-label="whatsapp"
+      class="link link--icon"
+      target="_blank"
+    > 
+      <i aria-hidden="true" class="fab fa-whatsapp"></i>
+    </a>
+    
+
+       
+        <a
+          href="https://www.linkedin.com/in/abdur-rafay-1x"
+          aria-label="linkedin"
+          class="link link--icon"
+          target="_blank"
+        >
+          <i aria-hidden="true" class="fab fa-linkedin"></i>
+        </a>
+      </div>
+
+    </main>
+<!-- ///////////////////////////////////////// -->
+  <!-- Chatbot Trigger Button -->
+  <button id="open-chatbot">Chatbot</button>
+
+  <!-- Chatbot Popup Window -->
+  <div id="chatbot">
+      <!-- Chatbot Header with Info Icon -->
+<div id="chatbot-header">
+  <b>CyberSoltec Assistant</b>
+  <span id="saveChatToggle" class="save-chat-icon" title="Toggle Save Chat">
+      <i class="fas fa-folder"></i> <!-- Folder icon -->
+  </span>
+  <span id="info-icon" title="How to use"><i class="fas fa-info-circle"></i></span> <!-- Circle-info icon -->
+</div>
+
+<!-- Overlay for Instructions -->
+<div id="info-overlay">
+  <div id="info-content">
+      <h3>How to Talk with the Chatbot:</h3>
+      <ul>
+          <li>Use clear and concise questions for better responses.</li>
+          <li>Specify any details or preferences related to your query.</li>
+          <li>If using images, make sure they are relevant to your question.(Only support .png file)</li>
+          <li>Avoid complex or vague sentences for quicker and accurate answers.</li>
+          <li>Click the 'i' button again to exit this preview.</li>
+      </ul>
+  </div>
+</div>
+      <div id="chatbot-body">
+          <!-- Chat messages will appear here -->
+          <div id="chatbot-response">
+          </div>
+      </div>
+
+      <!-- Image Preview Section -->
+      <div id="image-preview-container">
+          <button id="close-preview">X</button>
+          <img id="image-preview" src="" alt="Image Preview">
+      </div>
+
+      <div class="chatbot-input-container">
+          <textarea id="chatbot-input" rows="1" placeholder="Type a message..."></textarea>
+          <input type="file" id="image-input" accept="image/*">
+          <button id="upload-button">
+              <i class="fas fa-paperclip"></i>
+          </button>
+          <button id="chatbot-button">
+              <i class="fas fa-paper-plane"></i>
+          </button>
+      </div>
+  </div>
+
+<!-- ///////////////////////////// -->
+    <footer class="footer">
+      <h5>Email: a.rafayansari99@gmail.com</a></h5>
+      <h5>Phone: +923122053670</h5> 
+      <h5>Location: Karachi,Pakistan</h5> <br><br>
+      <a
+        href="https://github.com/CodeWithRafay"
         class="link footer__link"
       >
-        Created By Raj Shekhar
+        Developed By Abdur Rafay®
       </a>
     </footer>
 
     <div class="scroll-container">
-      <div class="scroll-top">
-        <a aria-label="Scroll up" href="#top">
-          <i aria-hidden="true" class="fas fa-arrow-up"></i>
-        </a>
-      </div>
+    <div class="scroll-top">
+      <a aria-label="Scroll up" href="#top">
+        <i aria-hidden="true" class="fas fa-arrow-up"></i>
+      </a>
+    </div>
     </div>
 
     <script src="./script.js"></script>

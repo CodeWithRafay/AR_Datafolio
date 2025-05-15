@@ -136,15 +136,24 @@ button {
 
 .link--icon {
   color: var(--clr-fg);
-  font-size: 1.2rem;
+  font-size: 3rem;
 }
 
 .btn {
   display: block;
+  margin-bottom: 20px;
   padding: 0.8em 1.4em;
   font-weight: 500;
   font-size: 0.9rem;
-  text-transform: lowercase;
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn2 {
+  display: block;
+  margin-bottom: 20px;
+  padding: 20px 40px;
+  font-weight: 500;
+  font-size: 1rem;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -252,7 +261,7 @@ main {
 
 .about {
   flex-direction: column;
-  margin-top: 3em;
+  margin-top: 100px;
 }
 
 .about__name {
@@ -261,16 +270,57 @@ main {
 
 .about__role {
   margin-top: 1.2em;
+  height: 70px; /* Set a fixed height for the typing effect */
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+  .about__role {
+    text-align: center; 
+    margin-left: 28px;/* Center align content on smaller screens */
+  }
 }
 
 .about__desc {
   font-size: 1rem;
+  text-align: center;
+  line-height: 2.5;
+  font-weight: 600;
+  justify-content: space-between;
   max-width: 600px;
 }
 
 .about__desc,
 .about__contact {
   margin-top: 2.4em;
+  text-align: center; /* Center align content */
+}
+
+.btn2.btn--outline {
+  display: inline-block; 
+  margin-left: 6px;/* Ensure button behaves as a block element */
+}
+
+@media only screen and (max-width: 768px) {
+  .about__contact {
+    text-align: center; 
+    margin-left: 122px;/* Center align content on smaller screens */
+  }
+}
+
+.about__contact.life {
+  display: flex;
+  justify-content: center; /* Align icons horizontally */
+  align-items: center; /* Align icons vertically */
+}
+
+.about__contact.life a {
+  margin: 0 20px; /* Adjust as needed */
+}
+
+.life2 {
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .about .link--icon {
@@ -334,6 +384,114 @@ main {
 
 .skills__list-item {
   margin: 0.5em;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.skills-card {
+  background-color: var(--clr-bg-alt); /* Matches the website's theme */
+  color: var(--clr-fg); /* Matches the text color */
+  border: 1px solid var(--clr-primary);
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-height: 400px; /* Set a maximum height for the card */
+  overflow-y: auto; /* Enable vertical scrolling */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-width: none; /* For Firefox */
+}
+
+/* Hide the scrollbar */
+.skills-card::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+.skills-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skills-card__title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  color: var(--clr-primary); /* Highlight the card title */
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  margin-bottom: 1em;
+}
+
+.skills-list span {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensure the percentage is on the right */
+  gap: 10px; /* Add spacing between the bar and percentage */
+}
+
+.progress {
+  background-color: var(--clr-bg); /* Background color of the progress bar */
+  border-radius: 5px;
+  overflow: hidden;
+  height: 8px; /* Slimmer bar */
+  flex: 1; /* Allow the bar to take up available space */
+}
+
+.progress-bar {
+  background-color: var(--clr-primary); /* Fill color of the progress bar */
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out; /* Smooth animation for width changes */
+}
+
+.progress-percentage {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--clr-primary); /* Match the primary color */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  .progress {
+    max-width: 80%; /* Reduce bar width for smaller screens */
+  }
+
+  .progress-percentage {
+    font-size: 0.8rem; /* Reduce font size for smaller screens */
+    margin-left: 8px; /* Adjust spacing */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .progress {
+    max-width: 75%; /* Further reduce bar width for very small screens */
+  }
+
+  .progress-percentage {
+    font-size: 0.7rem; /* Further reduce font size */
+    margin-left: 5px; /* Adjust spacing */
+  }
 }
 
 .contact {
@@ -411,3 +569,573 @@ main {
     display: none;
   }
 }
+
+.logo {
+  height: 30%;
+  width: 30%;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+/* certificatins css */
+
+.container {
+  margin-top: 50px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.col-md-6 {
+  flex: 0 0 calc(50% - 15px); /* Adjust as needed */
+  margin: 28px; /* Adjust the value as needed */
+}
+
+.img-fluid {
+  width: 108%;
+  height: auto;
+}
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 calc(100% - 15px);
+  }
+}
+
+/* Add margin to arrows */
+.slick-next {
+  margin: 0 -30px 0px 0px; /* Adjust the value as needed */
+}
+
+.slick-prev {
+  margin: 0 0px 0px -30px; /* Adjust the value as needed */
+}
+
+.cert {
+  height: 280px;
+}
+
+.cert2 {
+  height: 280px;
+}
+
+/* //////////// */
+/* Chatbot icon in the bottom-right corner */
+/* Chatbot Popup Button */
+#open-chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #6a5acd, #00bfff); /* Purple-Blue Gradient */
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: textAnimation 1.5s infinite; /* Add animation */
+}
+
+#open-chatbot:hover {
+  background: linear-gradient(135deg, #00bfff, #6a5acd); /* Reversed Gradient */
+}
+
+/* Text Animation */
+@keyframes textAnimation {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Chatbot Container */
+#chatbot {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 400px;
+  height: 600px;
+  display: none;
+  background: linear-gradient(135deg, #6a5acd, #00bfff); /* Blue-Purple Gradient */
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 9998;
+  flex-direction: column;
+  overflow: hidden;
+  opacity: 0; /* Hidden state */
+  transform: translateY(100px); /* Position below the screen */
+  transition: all 0.3s ease; /* Smooth transition for both opacity and position */
+  display: flex; /* Make sure it takes up space */
+}
+
+/* Visible state */
+#chatbot.show {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Move back to original position */
+}
+
+/* Chatbot Header */
+#chatbot-header {
+  background: linear-gradient(135deg, #6a5acd, #00bfff); /* Blue-Purple Gradient */
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+}
+
+.save-chat-icon {
+  cursor: pointer; /* Change cursor to pointer */
+  font-size: 20px; /* Icon size */
+  color: white; /* White color for the icon */
+  margin-left: 150px; /* Space from the chatbot name or other elements */
+  transition: transform 0.3s ease; /* Smooth animation for hover effect */
+}
+
+.save-chat-icon:hover {
+  transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+#chatbot-header:hover {
+  background: linear-gradient(135deg, #00bfff, #6a5acd); /* Reversed Gradient */
+}
+
+/* Chatbot Body */
+#chatbot-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+  background-color: #ece5dd;
+  scroll-behavior: smooth; /* Smooth scroll effect */
+}
+
+#chatbot-body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Input Section */
+.chatbot-input-container {
+  display: flex;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-top: 1px solid #ddd;
+  align-items: center;
+  gap: 10px; /* Add spacing between elements */
+}
+
+.save-chat-icon {
+  cursor: pointer; /* Change cursor to pointer */
+  font-size: 20px; /* Icon size */
+  color: white; /* White color for the icon */
+  margin-left: 130px; /* Space from the chatbot name or other elements */
+  transition: transform 0.3s ease; /* Smooth animation for hover effect */
+}
+
+.save-chat-icon:hover {
+  transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+#chatbot-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  resize: none;
+  display: flex;
+  align-items: center;
+}
+
+.chat-message {
+  background-color: #f0f0f0; /* Light background color for better visibility */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 15px; /* Padding for comfort */
+  margin: 5px 0; /* Space between messages */
+  font-size: 14px; /* Font size for better readability */
+  color: #333; /* Darker text color */
+  animation: fadeIn 0.5s ease-in-out; /* Animation for smooth appearance */
+  max-width: 80%; /* Responsive width */
+  word-wrap: break-word; /* Prevent overflow */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px); /* Slightly move up */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+  }
+}
+
+#image-input {
+  display: none;
+}
+
+#upload-button {
+  background: linear-gradient(135deg, #6a5acd, #00bfff); /* Blue-Purple Gradient */
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.1s ease; /* Smooth transform */
+}
+
+#upload-button:hover {
+  background: linear-gradient(135deg, #00bfff, #6a5acd); /* Reversed Gradient on Hover */
+}
+
+#upload-button:active {
+  transform: scale(0.95); /* Slight shrinking on click */
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.5); /* Optional glow effect */
+}
+
+#chatbot-button {
+  background: linear-gradient(135deg, #6a5acd, #00bfff); /* Blue-Purple Gradient */
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  height: 40px;
+  width: 40px;
+  transition: transform 0.1s ease; /* Smooth transform */
+}
+
+#chatbot-button:hover {
+  background: linear-gradient(135deg, #00bfff, #6a5acd); /* Reversed Gradient on Hover */
+}
+
+#chatbot-button:active {
+  transform: scale(0.95); /* Slight shrinking on click */
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.5); /* Optional glow effect */
+}
+
+/* Chatbot Messages */
+.message-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.user-message,
+.bot-message {
+  padding: 10px;
+  border-radius: 7px;
+  font-size: 14px;
+  max-width: 80%;
+  line-height: 1.4;
+  position: relative;
+  margin-left: 10px; /* Add spacing between icon and message */
+}
+
+.user-message {
+  background-color: #dcf8c6;
+  margin-left: auto;
+  margin-right: 10px; /* Add spacing between message and profile icon */
+  display: flex;
+  align-items: center;
+}
+
+.bot-message {
+  background-color: #fff;
+  margin-right: auto;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+/* Profile icon styling */
+.profile-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ddd;
+  color: #333;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* Bounce animation on hover */
+.profile-icon:hover i {
+  animation: bounce 1s;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Bot messages */
+.message-container .profile-icon i.fas.fa-robot {
+  color: #0084ff; /* Customize bot color */
+}
+
+/* User messages */
+.message-container .profile-icon i.fas.fa-user {
+  color: #00c300; /* Customize user color */
+}
+
+/* Loading Dots Animation */
+/* Loading Dots Animation with fade */
+@keyframes loadingDots {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.blinking-dots::after {
+  content: "...Loading...";
+  animation: loadingDots 1.5s ease-in-out infinite;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Fade-in effect for new messages */
+.message-container {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.3s forwards ease-out; /* Adds fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Image Preview */
+#image-preview-container {
+  position: absolute;
+  top: 48px; /* Offset from the top to leave space for the header */
+  left: 0;
+  right: 0;
+  bottom: 60px; /* Offset from the bottom to leave space for the footer (input area) */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% transparency */
+  justify-content: center;
+  align-items: center;
+  display: none; /* Hidden by default */
+  z-index: 1000; /* Ensure it stays above the chat messages */
+}
+
+#image-preview {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  transform: scale(0.9);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#image-preview-container.show #image-preview {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Close button for image preview */
+#close-preview {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% transparency */
+  border: none; /* Borderless */
+  font-size: 20px;
+  color: white; /* White text color */
+  padding: 5px 10px; /* Add some padding to the button */
+  border-radius: 5px; /* Optional: Rounded corners */
+  z-index: 1001; /* Ensure it stays above the image */
+}
+
+.centered-message {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 8px 12px;
+  margin: 10px auto;
+  border-radius: 5px;
+  font-style: italic;
+  text-align: center;
+  width: fit-content;
+  max-width: 80%;
+  display: block;
+}
+
+/* Info Icon Styles */
+#info-icon {
+  cursor: pointer;
+}
+
+/* Overlay Styles */
+#info-overlay {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: none; /* Hidden by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+#info-content {
+  max-width: 90%;
+  text-align: left;
+}
+
+#info-overlay.show {
+  display: flex;
+  opacity: 1;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 768px) {
+  #chatbot {
+    width: 90%;
+    right: 5%;
+    bottom: 20px;
+    height: 80%;
+  }
+
+  #open-chatbot {
+    right: 5%;
+    bottom: 20px;
+  }
+
+  #image-label {
+    display: none;
+  }
+}
+
+/* Light Mode (default styles) */
+.education-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  text-align: center; /* Center text inside the section */
+  padding: 40px 20px; /* Add padding for spacing */
+}
+
+.education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Add spacing between education items */
+  width: 100%; /* Ensure it takes full width */
+  max-width: 800px; /* Limit the width for better readability */
+}
+
+.education-item {
+  background-color: var(--clr-bg-alt); /* Background color for each item */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--shadow); /* Add shadow for better appearance */
+}
+
+.education-item h3 {
+  font-size: 1.5rem;
+  color: var(--clr-primary); /* Highlight the title */
+  margin-bottom: 10px;
+}
+
+.education-item p {
+  margin: 5px 0;
+  color: var(--clr-fg); /* Use the foreground color for text */
+}
+
+.section-title {
+  text-align: center; /* Center the text */
+  margin-bottom: 1em; /* Add spacing below the header */
+  text-transform: uppercase; /* Make the text uppercase like other headings */
+  font-size: 2rem; /* Adjust the font size to match other section titles */
+  color: var(--clr-fg-alt); /* Use the alternate text color */
+}
+
+.education-section__title {
+  text-align: center; /* Center the text */
+  margin-bottom: 1em; /* Add spacing below the header */
+  text-transform: uppercase; /* Make the text uppercase like other headings */
+  font-size: 2rem; /* Adjust the font size to match other section titles */
+  color: var(--clr-fg-alt); /* Use the alternate text color */
+}
+
+/* Dark Mode */
+body.dark-mode .education-section {
+  background-color: var(--clr-bg); /* Matches dark mode background */
+  color: var(--clr-fg); /* Matches dark mode text color */
+}
+
+body.dark-mode .education-item {
+  background-color: var(--clr-bg-alt); /* Slightly lighter background for items */
+  box-shadow: var(--shadow); /* Matches dark mode shadow */
+}
+
+body.dark-mode .education-item h3 {
+  color: var(--clr-primary); /* Matches the primary color */
+}
+
+body.dark-mode .institute, 
+body.dark-mode .duration {
+  color: var(--clr-fg-alt); /* Matches alternate text color */
+}
+
+body.dark-mode .description {
+  color: var(--clr-fg); /* Matches dark mode text color */
+}
+
